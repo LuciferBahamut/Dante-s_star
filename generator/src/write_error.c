@@ -6,10 +6,9 @@
 */
 
 #include <unistd.h>
-
-int my_strlen(char const *str);
+#include <string.h>
 
 void write_error(char *str)
 {
-    write(2, str, my_strlen(str));
+    write(2, str, strlen(str));
 }
