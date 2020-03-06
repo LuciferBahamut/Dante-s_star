@@ -7,6 +7,8 @@
 
 #include "generator.h"
 
-void generate(int ac, char **av)
+void generate(map_t *m)
 {
+    for (int i = 0; i != m->y; i++)
+        printf("%s\n", m->map[i]);
 }

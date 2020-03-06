@@ -8,6 +8,7 @@
 NAME	=	generator
 
 SRC	=	src/main.c		\
+		src/fill_struct.c	\
 		src/generate.c		\
 		src/error_handling.c	\
 		src/my_atoi.c		\

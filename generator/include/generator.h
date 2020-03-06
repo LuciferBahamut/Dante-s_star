@@ -8,7 +8,17 @@
 #ifndef __GENERATOR_H__
 #define __GENERATOR_H__
 
-void generate(int ac, char **av);
+#include <stdlib.h>
+
+typedef struct map_t
+{
+    char **map;
+    int x;
+    int y;
+} map_t;
+
+void fill_struct(map_t *m, char **av);
+void generate(map_t *m);
 int error_handling(int ac, char**av);
 
 void write_error(char *str);
