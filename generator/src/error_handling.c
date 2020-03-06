@@ -18,7 +18,7 @@ int error_handling(int ac, char **av)
                 write_error(STR_ERROR_DIM);
                 return (TRUE);
             }
-    if (x == 0 || y == 0) {
+    if (y == 0 || x == 0) {
         write_error(STR_ERROR_NBR);
         return (TRUE);
     }

@@ -8,6 +8,7 @@
 #ifndef __GENERATOR_H__
 #define __GENERATOR_H__
 
+void generate(int ac, char **av);
 int error_handling(int ac, char**av);
 
 void write_error(char *str);
