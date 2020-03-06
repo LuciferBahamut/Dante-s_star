@@ -8,6 +8,8 @@
 NAME	=	generator
 
 SRC	=	src/main.c		\
+		src/error_handling.c	\
+		src/my_atoi.c		\
 		src/write_error.c
 
 OBJ	=	$(SRC:.c=.o)
