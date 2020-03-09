@@ -5,13 +5,11 @@
 ## makefile root
 ##
 
-NAME	=	
+NAME	=	test
 
-SRC	=	src/main.c		\
-		src/my_strlen.c		\
-		src/my_putchar.c	\
-		src/my_putstr.c		\
-		src/write_error.c
+GENERATOR =	generator/
+
+SOLVER	=	solver/
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -20,10 +18,12 @@ CFLAGS	=	-W -Wextra -Wall
 CPPFLAGS=	-I./include/
 
 all	:	$(OBJ)
-		gcc $(CFLAGS) -o $(NAME) $(SRC) $(CPPFLAGS)
+		make -C $(GENERATOR)
+		make -C $(SOLVER)
 
 clean	:
-		rm -f $(OBJ)
+		$(GENERATOR) rm -f $(OBJ)
+		$(SOLVER) rm -f $(OBJ)
 
 fclean	:	clean
 		rm -f $(NAME)
