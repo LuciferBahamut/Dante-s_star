@@ -5,8 +5,6 @@
 ## makefile root
 ##
 
-NAME	=	test
-
 GENERATOR =	generator/
 
 SOLVER	=	solver/
@@ -26,7 +24,6 @@ clean	:
 		$(SOLVER) rm -f $(OBJ)
 
 fclean	:	clean
-		rm -f $(NAME)
 
 re	:	fclean all
 
