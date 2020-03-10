@@ -8,7 +8,11 @@
 NAME	=	solver
 
 SRC	=	src/main.c		\
-		src/write_error.c
+		src/fill_struct.c	\
+		src/split_map.c		\
+		src/error_handling.c	\
+		util/write_error.c	\
+		util/my_strlen.c
 
 OBJ	=	$(SRC:.c=.o)
 

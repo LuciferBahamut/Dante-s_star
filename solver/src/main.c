@@ -9,9 +9,17 @@
 
 int main(int ac, char **av)
 {
+    map_t *m = malloc(sizeof(map_t));
+
     if (ac != 2) {
         write_error(STR_ERROR_ARG);
         return (ERROR);
     }
+    fill_struct(m);
+    if (error_handling(av[1], m) == ERROR) {
+        free(m);
+        return (ERROR);
+    }
+    free(m);
     return (SUCCESS);
 }
