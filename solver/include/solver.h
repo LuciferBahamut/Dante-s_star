@@ -22,8 +22,9 @@ typedef struct map_t
     char **map;
 } map_t;
 
-void fill_struct(map_t *m);
+int solve_this(map_t *m);
 
+void fill_struct(map_t *m);
 void split_map(map_t *m, char *buff);
 
 int error_handling(char *arg,  map_t *m);
@@ -32,6 +33,8 @@ int my_strlen(char const *str);
 
 #define ERROR 84
 #define SUCCESS 0
+#define TRUE 1
+#define FALSE 0
 
 #define STR_ERROR_ARG "this program must take 2 args. it must be a maze file.\n"
 #define STR_ERROR_OPEN "could not open file.\n"

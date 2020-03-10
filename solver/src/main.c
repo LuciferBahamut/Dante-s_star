@@ -20,6 +20,7 @@ int main(int ac, char **av)
         free(m);
         return (ERROR);
     }
-    free(m);
+    if (solve_this(m))
+        free(m);
     return (SUCCESS);
 }

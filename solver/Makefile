@@ -8,6 +8,7 @@
 NAME	=	solver
 
 SRC	=	src/main.c		\
+		src/solver.c		\
 		src/fill_struct.c	\
 		src/split_map.c		\
 		src/error_handling.c	\
