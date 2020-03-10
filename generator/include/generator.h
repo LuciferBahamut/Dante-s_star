@@ -9,15 +9,17 @@
 #define __GENERATOR_H__
 
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef struct map_t
 {
     char **map;
     int x;
     int y;
+    int perfect;
 } map_t;
 
-void fill_struct(map_t *m, char **av);
+void fill_struct(map_t *m, int ac, char **av);
 void generate(map_t *m);
 int error_handling(int ac, char**av);
 

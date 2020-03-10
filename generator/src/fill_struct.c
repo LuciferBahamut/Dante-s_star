@@ -7,10 +7,12 @@
 
 #include "generator.h"
 
-void fill_struct(map_t *m, char **av)
+void fill_struct(map_t *m, int ac, char **av)
 {
-    int max;
-
+    if (ac == 3)
+        m->perfect = FALSE;
+    else
+        m->perfect = TRUE;
     m->x = my_atoi(av[1]);
     m->y = my_atoi(av[2]);
     m->map = malloc(sizeof(char *) * m->y);
