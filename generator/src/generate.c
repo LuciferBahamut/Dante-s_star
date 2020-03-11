@@ -15,6 +15,8 @@ void generate_imperfect(map_t *m)
 
 void generate_perfect(map_t *m)
 {
+    for (int i = 0; i != m->y; i++)
+        printf("%s\n", m->map[i]);
 }
 
 void generate(map_t *m)

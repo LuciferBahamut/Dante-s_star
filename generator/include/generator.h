@@ -25,6 +25,8 @@ int error_handling(int ac, char**av);
 
 void write_error(char *str);
 int my_atoi(char const *str);
+int my_strlen(char const *str);
+int my_strcmp(char const *str1, char const *str2);
 
 #define ERROR 84
 #define SUCCESS 0
@@ -34,5 +36,6 @@ int my_atoi(char const *str);
 #define STR_ERROR_ARG "this program must take 2 to 3 args (x y [perfect])\n"
 #define STR_ERROR_DIM "the dimentions are incorect\n"
 #define STR_ERROR_NBR "the dimensions must be different from 0\n"
+#define STR_ERROR_INVARG "the third argument must be perfect\n"
 
 #endif
