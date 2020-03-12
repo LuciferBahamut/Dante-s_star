@@ -13,6 +13,8 @@ void fill_struct(map_t *m, int ac, char **av)
         m->perfect = FALSE;
     else
         m->perfect = TRUE;
+    m->coord_x = 0;
+    m->coord_y = 0;
     m->x = my_atoi(av[1]);
     m->y = my_atoi(av[2]);
     m->map = malloc(sizeof(char *) * m->y);

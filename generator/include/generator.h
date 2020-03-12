@@ -14,14 +14,18 @@
 typedef struct map_t
 {
     char **map;
+    int coor_x;
+    int coor_y;
     int x;
     int y;
     int perfect;
 } map_t;
 
-void fill_struct(map_t *m, int ac, char **av);
-void generate(map_t *m);
 int error_handling(int ac, char**av);
+void fill_struct(map_t *m, int ac, char **av);
+
+void generate(map_t *m);
+int breakable_walls(map_t *m);
 
 void write_error(char *str);
 int my_atoi(char const *str);
