@@ -9,19 +9,13 @@ GENERATOR =	generator/
 
 SOLVER	=	solver/
 
-OBJ	=	$(SRC:.c=.o)
-
-CFLAGS	=	-W -Wextra -Wall
-
-CPPFLAGS=	-I./include/
-
 all	:	$(OBJ)
 		make -C $(GENERATOR)
 		make -C $(SOLVER)
 
 clean	:
-		$(GENERATOR) rm -f $(OBJ)
-		$(SOLVER) rm -f $(OBJ)
+		make fclean -C $(GENERATOR)
+		make fclean -C $(SOLVER)
 
 fclean	:	clean
 
