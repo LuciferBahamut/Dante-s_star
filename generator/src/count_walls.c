@@ -11,6 +11,22 @@ int breakable_walls_ud(map_t *m)
 {
     int walls = 0;
 
+    if (m->coord_y == 0) {
+        if (m->map[m->coord_y][m->coord_x + 1] == 'X')
+            walls++;
+        if (m->map[m->coord_y][m->coord_x - 1] == 'X')
+            walls++;
+        if (m->map[m->coord_y + 1][m->coord_x] == 'X')
+            walls++;
+    }
+    if (m->coord_y == m->y) {
+        if (m->map[m->coord_y][m->coord_x - 1] == 'X')
+            walls++;
+        if (m->map[m->coord_y][m->coord_x + 1] == 'X')
+            walls++;
+        if (m->map[m->coord_y - 1][m->coord_x] == 'X')
+            walls++;
+    }
     return (walls);
 }
 
@@ -18,6 +34,25 @@ int breakable_walls_rl(map_t *m)
 {
     int walls = 0;
 
+    if (m->coord_x == 0) {
+        if (m->map[m->coord_y][m->coord_x + 1] == 'X')
+            if (m->map[m->coord_y][m->coord_x + 2] == 'X')
+                walls++;
+        if (m->map[m->coord_y + 1][m->coord_x] == 'X')
+            if (m->map[m->coord_y + 2][m->coord_x] == 'X')
+                walls++;
+        if (m->map[m->coord_y - 1][m->coord_x] == 'X')
+            if (m->map[m->coord_y - 2][m->coord_x] == 'X')
+                walls++;
+    }
+    if (m->coord_x == m->x) {
+        if (m->map[m->coord_y][m->coord_x - 1] == 'X')
+            walls++;
+        if (m->map[m->coord_y + 1][m->coord_x] == 'X')
+            walls++;
+        if (m->map[m->coord_y - 1][m->coord_x] == 'X')
+            walls++;
+    }
     return (walls);
 }
 
@@ -25,9 +60,9 @@ int breakable_walls(map_t *m)
 {
     int walls = 0;
 
-    if (m->coor_x - 1 == -1 || m->coor_x + 1 == m->x + 1)
+    if (m->coord_x == 0 || m->coord_x == m->x)
         return (breakable_walls_rl(m));
-    if (m->coor_y - 1 == -1 || m->coor_y + 1 == m->y + 1)
+    if (m->coord_y == 0|| m->coord_y == m->y)
         return (breakable_walls_ud(m));
     return (walls);
 }

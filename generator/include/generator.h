@@ -14,8 +14,8 @@
 typedef struct map_t
 {
     char **map;
-    int coor_x;
-    int coor_y;
+    int coord_x;
+    int coord_y;
     int x;
     int y;
     int perfect;
