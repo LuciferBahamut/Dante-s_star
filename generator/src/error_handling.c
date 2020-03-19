@@ -9,8 +9,8 @@
 
 int error_handling_xy(int ac, char **av)
 {
-    int x = my_atoi(av[1]);
-    int y = my_atoi(av[2]);
+    int x = atoi(av[1]);
+    int y = atoi(av[2]);
 
     for (int i = 1; i != ac; i++)
         for (int j = 0; av[i][j] != '\0'; j++)
@@ -27,8 +27,8 @@ int error_handling_xy(int ac, char **av)
 
 int error_handling_perfect(int ac, char **av)
 {
-    int x = my_atoi(av[1]);
-    int y = my_atoi(av[2]);
+    int x = atoi(av[1]);
+    int y = atoi(av[2]);
 
     for (int i = 1; i != ac - 1; i++)
         for (int j = 0; av[i][j] != '\0'; j++)
