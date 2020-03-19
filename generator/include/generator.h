@@ -25,6 +25,7 @@ int error_handling(int ac, char**av);
 void fill_struct(map_t *m, int ac, char **av);
 
 void generate(map_t *m);
+void generate_path(map_t *m);
 int breakable_walls(map_t *m);
 
 void write_error(char *str);

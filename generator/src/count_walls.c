@@ -60,9 +60,15 @@ int breakable_walls(map_t *m)
 {
     int walls = 0;
 
+/*    if (is_in_corner(m)) {
+        walls = count_walls_corner(m);
+        return (walls);
+    }
+*/
     if (m->coord_x == 0 || m->coord_x == m->x)
         return (breakable_walls_rl(m));
     if (m->coord_y == 0|| m->coord_y == m->y)
         return (breakable_walls_ud(m));
+//    walls = breakable_walls_all(m);
     return (walls);
 }

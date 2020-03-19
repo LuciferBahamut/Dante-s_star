@@ -15,9 +15,9 @@ void generate_imperfect(map_t *m)
 
 void generate_perfect(map_t *m)
 {
-    int w = breakable_walls(m);
+//    int w = breakable_walls(m);
 
-    printf("%d\n", w);
+    generate_path(m);
     for (int i = 0; i != m->y; i++)
         printf("%s\n", m->map[i]);
 }

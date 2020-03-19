@@ -10,6 +10,7 @@ NAME	=	generator
 SRC	=	src/main.c		\
 		src/fill_struct.c	\
 		src/generate.c		\
+		src/path.c		\
 		src/count_walls.c	\
 		src/error_handling.c	\
 		util/my_strcmp.c	\
