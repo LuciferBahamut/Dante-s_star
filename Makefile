@@ -14,10 +14,12 @@ all	:	$(OBJ)
 		make -C $(SOLVER)
 
 clean	:
-		make fclean -C $(GENERATOR)
-		make fclean -C $(SOLVER)
+		make clean -C $(GENERATOR)
+		make clean -C $(SOLVER)
 
 fclean	:	clean
+		make fclean -C $(GENERATOR)
+		make fclean -C $(SOLVER)
 
 re	:	fclean all
 
