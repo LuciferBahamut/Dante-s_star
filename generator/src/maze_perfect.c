@@ -52,10 +52,6 @@ void explore(int x, int y, map_t *m)
 
 void maze_perfect(map_t *m)
 {
-//    if (m->x % 2 == 0)
-//        m->x -= 1;
-//    if (m->y % 2 == 0)
-//        m->y -= 1;
     explore(m->coord_x, m->coord_y, m);
     for (int j = 2; j != m->x; j++)
         m->map[m->y-1][j] = '*';
