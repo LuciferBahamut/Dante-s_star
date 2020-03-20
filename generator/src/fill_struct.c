@@ -7,7 +7,7 @@
 
 #include "generator.h"
 
-void fill_struct_bis(map_t *m, int ac, char **av)
+void fill_struct_bis(map_t *m)
 {
     m->direction = malloc(sizeof(int) * 4);
     m->explored = 0;
@@ -24,13 +24,10 @@ void fill_struct(map_t *m, int ac, char **av)
         m->perfect = TRUE;
     m->coord_x = 0;
     m->coord_y = 0;
-<<<<<<< HEAD
-    m->x = my_atoi(av[1]);
-    m->y = my_atoi(av[2]);
-=======
     m->x = atoi(av[1]);
     m->y = atoi(av[2]);
->>>>>>> 7b62d763a1437ceada9152b0ecd8bb7be9f3b16f
+    m->x = atoi(av[1]);
+    m->y = atoi(av[2]);
     m->map = malloc(sizeof(char *) * m->y);
     for (int i = 0; i != m->y; i++)
         m->map[i] = malloc(sizeof(char) * m->x);
@@ -39,5 +36,5 @@ void fill_struct(map_t *m, int ac, char **av)
             m->map[i][j] = 'X';
         m->map[i][m->x] = '\0';
     }
-    fill_struct_bis(m, ac, av);
+    fill_struct_bis(m);
 }

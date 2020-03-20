@@ -10,21 +10,17 @@
 void generate_imperfect(map_t *m)
 {
     maze_perfect(m);
-    for (int i = 0; i != m->y; i++)
+    for (int i = 0; i != m->y - 1; i++)
         printf("%s\n", m->map[i]);
+    printf("%s", m->map[m->y- 1]);
 }
 
 void generate_perfect(map_t *m)
 {
-<<<<<<< HEAD
-//    int w = breakable_walls(m);
-
-    generate_path(m);
-=======
     maze_perfect(m);
->>>>>>> 7b62d763a1437ceada9152b0ecd8bb7be9f3b16f
     for (int i = 0; i != m->y; i++)
         printf("%s\n", m->map[i]);
+    printf("%s", m->map[m->y - 1]);
 }
 
 void generate(map_t *m)

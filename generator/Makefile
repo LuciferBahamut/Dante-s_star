@@ -10,11 +10,6 @@ NAME	=	generator
 SRC	=	src/main.c		\
 		src/fill_struct.c	\
 		src/generate.c		\
-<<<<<<< HEAD
-		src/path.c		\
-		src/count_walls.c	\
-=======
->>>>>>> 7b62d763a1437ceada9152b0ecd8bb7be9f3b16f
 		src/error_handling.c	\
 		src/maze_perfect.c	\
 		src/random_handling.c	\

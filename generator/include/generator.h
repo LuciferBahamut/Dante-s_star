@@ -27,7 +27,7 @@ typedef struct map_t
     int random;
 } map_t;
 
-int error_handling(int ac, char**av);
+int error_handling(int ac, char **av);
 void fill_struct(map_t *m, int ac, char **av);
 
 void generate(map_t *m);
