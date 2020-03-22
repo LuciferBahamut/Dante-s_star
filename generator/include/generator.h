@@ -16,31 +16,16 @@
 typedef struct map_t
 {
     char **map;
-    int *direction;
-    int coord_x;
-    int coord_y;
     int x;
     int y;
     int perfect;
-    int explored;
-    int dir;
-    int random;
 } map_t;
 
 int error_handling(int ac, char **av);
 void fill_struct(map_t *m, int ac, char **av);
 
 void generate(map_t *m);
-void generate_path(map_t *m);
-int breakable_walls(map_t *m);
-
 void maze_perfect(map_t *m);
-void explore(int x, int y , map_t *m);
-void random_handling(int x, int y, map_t *m);
-void dir_up(int x, int y, map_t *m);
-void dir_down(int x, int y, map_t *m);
-void dir_left(int x, int y, map_t *m);
-void dir_right(int x, int y, map_t *m);
 
 void write_error(char *str);
 int my_strcmp(char const *str1, char const *str2);

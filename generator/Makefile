@@ -12,8 +12,6 @@ SRC	=	src/main.c		\
 		src/generate.c		\
 		src/error_handling.c	\
 		src/maze_perfect.c	\
-		src/random_handling.c	\
-		src/direction.c		\
 		util/my_strcmp.c	\
 		util/write_error.c
 
