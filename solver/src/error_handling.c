@@ -7,7 +7,7 @@
 
 #include "solver.h"
 
-int check_splitted_map(map_t *m)
+static int check_splitted_map(map_t *m)
 {
     m->x = my_strlen(m->map[0]);
     for (int i = 0; i != m->y; i++)
@@ -18,7 +18,7 @@ int check_splitted_map(map_t *m)
     return (SUCCESS);
 }
 
-int check_buffer(char *buff)
+static int check_buffer(char *buff)
 {
     for (int i = 0; buff[i] != '\0'; i++)
         if (buff[i] != '*' && buff[i] != 'X' && buff[i] != '\n') {
@@ -28,7 +28,7 @@ int check_buffer(char *buff)
     return (SUCCESS);
 }
 
-int is_maze_valid(char *arg, int fd, map_t *m)
+static int is_maze_valid(char *arg, int fd, map_t *m)
 {
     struct stat st;
     char *buffer;

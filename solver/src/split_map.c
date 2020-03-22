@@ -7,7 +7,7 @@
 
 #include "solver.h"
 
-int count_lines(char *buff)
+static int count_lines(char *buff)
 {
     int count = 0;
 

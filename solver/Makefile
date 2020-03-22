@@ -9,6 +9,11 @@ NAME	=	solver
 
 SRC	=	src/main.c		\
 		src/solver.c		\
+		src/init_struct.c	\
+		src/a_star.c		\
+		src/handle_way.c	\
+		src/check_north_south.c	\
+		src/check_east_west.c	\
 		src/fill_struct.c	\
 		src/split_map.c		\
 		src/error_handling.c	\

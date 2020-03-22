@@ -15,14 +15,49 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-typedef struct map_t
+typedef struct pile_s
+{
+    int x;
+    int y;
+    struct pile_s *prev;
+} pile_t;
+
+typedef struct pos_s
+{
+    int x;
+    int y;
+    int fx;
+    int fy;
+    pile_t *h;
+    struct pos_s *next;
+    struct pos_s *prev;
+} pos_t;
+
+typedef struct list_s
+{
+    pos_t *first;
+    pos_t *last;
+} list_t;
+
+typedef struct map_s
 {
     int x;
     int y;
     char **map;
 } map_t;
 
+int get_dist(map_t *m, pos_t **pos, list_t *list);
+void way_maker(pile_t *pile, map_t *m);
+
+int check_east(map_t *m, pos_t *pos, list_t *list);
+int check_west(map_t *m, pos_t *pos, list_t *list);
+int check_north(map_t *m, pos_t *pos, list_t *list);
+int check_south(map_t *m, pos_t *pos, list_t *list);
+
 int solve_this(map_t *m);
+char **a_star(map_t *m, list_t *list, pos_t *pos);
+void init_pos(pos_t *pos, list_t *list, int x, int y);
+void init_pile(pile_t **list, int x, int y);
 
 void fill_struct(map_t *m);
 void split_map(map_t *m, char *buff);
