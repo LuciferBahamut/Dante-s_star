@@ -42,8 +42,9 @@ int solve_this(map_t *m)
         printf("no solution found\n");
     else {
         replace_twos(m);
-        for (int i = 0; i != m->y; i++)
+        for (int i = 0; i != m->y - 1; i++)
             printf("%s\n", m->map[i]);
+        printf("%s", m->map[m->y - 1]);
     }
     return (TRUE);
 }
