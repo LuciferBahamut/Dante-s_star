@@ -5,13 +5,13 @@
 
 |        Category        | Percentage | Number of tests | Crash ? |
 |:----------------------:|:----------:|:---------------:|:-------:|
-|         Basics         |    100 %   |       2/2       |    x    |
-|    Basic Generation    |    100 %   |       3/3       |    x    |
-|   Advenced Generation  |     0 %    |       0/2       |    x    |
-| Medium Size Generation |    50 %    |       1/2       |    x    |
-|   Big Size Generation  |    40 %    |       2/5       |    x    |
-|         Solving        |     0 %    |       0/6       |    x    |
-|       **Results**      |  **40 %**  |       8/20      |    x    |
+|         Basics         |    100 %   |       2 / 2     |    x    |
+|    Basic Generation    |    100 %   |       3 / 3     |    x    |
+|   Advenced Generation  |     0 %    |       0 / 2     |    x    |
+| Medium Size Generation |    50 %    |       1 / 2     |    x    |
+|   Big Size Generation  |    40 %    |       2 / 5     |    x    |
+|         Solving        |     0 %    |       0 / 6     |    x    |
+|       **Results**      |  **40 %**  |       8 / 20    |    x    |
 
 Beware of -42 for Epitech students !
 
